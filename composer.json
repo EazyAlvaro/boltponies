@@ -3,7 +3,7 @@
     "description": "An extension to add a colourpicker as a field type within Bolt",
     "type": "bolt-extension", 
    "require": {
-        "bolt/bolt": ">1.9,<=2.9.999"
+        "bolt/bolt": ">2.0,<=2.9.999"
     },
     "license": "MIT",
     "authors": [{"name": "Alvaro", "email": "a.berndt@youwe.nl"}
@@ -11,7 +11,7 @@
     "autoload": {
         "files": ["init.php"],
         "psr-4": {
-            "Bolt\\Extensions\\Boltponies\\": ""
+            "Bolt\\Extensions\\boltponies\\": ""
         }
     }
 }
