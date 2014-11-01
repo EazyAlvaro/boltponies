@@ -34,7 +34,7 @@ class Extension extends BaseExtension
    function info()
     {
         $data = array(
-            'name' => "Bot Killer",
+            'name' => "boltponies",
             'description' => "a bolt-extension that implements http://panzi.github.io/Browser-Ponies/",
             'keywords' => "ponies",
             'author' => "Alvaro Berndt",
@@ -48,7 +48,8 @@ class Extension extends BaseExtension
             'dependencies' => "",
             'priority' => 10
         );
-       
+        return $data;
+    }
 
 
 
