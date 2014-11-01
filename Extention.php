@@ -1,8 +1,9 @@
 <?php
 
-namespace Bolt\Extensions\Boltponies;
+namespace Bolt\Extension\EazyAlvaro\Boltponies;
 use Bolt\Application;
 use Bolt\BaseExtension;
+
 class Extension extends BaseExtension
 {
     

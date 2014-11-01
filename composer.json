@@ -10,7 +10,7 @@
     "autoload": {
         "files": ["init.php"],
         "psr-4": {
-            "Bolt\\Extensions\\Boltponies\\": ""
+            "Boltponies\\": ""
         }
     },
      "extra": {
