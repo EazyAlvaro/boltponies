@@ -10,7 +10,7 @@
     "autoload": {
         "files": ["init.php"],
         "psr-4": {
-            "boltponies\\": ""
+            "Bolt\\Extension\\EazyAlvaro\\Boltponies\\": ""
         }
     },
      "extra": {
