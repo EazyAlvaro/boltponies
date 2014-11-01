@@ -6,12 +6,11 @@
         "bolt/bolt": ">=2.0.0,<=3.0.0"
     },
     "license": "MIT",
-    "authors": [{"name": "Alvaro", "email": "a.berndt@youwe.nl"}
-    ],
+    "authors": [{"name": "Alvaro", "email": "a.berndt@youwe.nl"}],
     "autoload": {
         "files": ["init.php"],
         "psr-4": {
-            "Bolt\\Extensions\\boltponies\\": ""
+            "Bolt\\Extensions\\Boltponies\\": ""
         }
     },
      "extra": {
