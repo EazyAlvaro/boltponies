@@ -1,6 +1,6 @@
 {
     "name" : "eazyalvaro/boltponies",
-    "description" : "An extension that implements http://panzi.github.io/Browser-Ponies/",
+    "description" : "An extension that implements http://panzi.github.io/Browser-Ponies/ , still a work in progress",
     "type" : "bolt-extension",
     "keywords" : [
         "ponies"
@@ -10,7 +10,7 @@
     },
     "license" : "MIT",
     "authors" : [{
-            "name" : "Alvaro",
+            "name" : "Alvaro Berndt",
             "email" : "a.berndt@youwe.nl"
         }
     ],
@@ -19,7 +19,7 @@
             "init.php"
         ],
         "psr-4" : {
-            "Bolt\\Extension\\EazyAlvaro\\Boltponies\\" : ""
+            "Bolt\\Extension\\EazyAlvaro\\BoltPonies\\" : ""
         }
     },
     "extra" : {
