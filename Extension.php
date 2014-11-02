@@ -3,6 +3,7 @@
 namespace Bolt\Extension\EazyAlvaro\Boltponies;
 use Bolt\Application;
 use Bolt\BaseExtension;
+use Bolt\Extensions\Snippets\Location as SnippetLocation;
 
 class Extension extends BaseExtension
 {
@@ -12,7 +13,6 @@ class Extension extends BaseExtension
     {
         parent::__construct($app);
         
-        //$this->app['config']->getFields()->addField(new ColourPickField());
         
         
         if ($this->app['config']->getWhichEnd()=='frontend') {
@@ -20,9 +20,26 @@ class Extension extends BaseExtension
             $this->app['twig.loader.filesystem']->prependPath(__DIR__."/twig");
         }
     }
+    
+    
     public function initialize() {
         $this->addJavascript('assets/browserponies.js', true);
         $this->addJavascript('assets/ponycfg.js', true);
+        $this->addJavascript('assets/clop.js', true);
+        
+        $this->addJavascript('assets/browserponies.js', false);
+        $this->addJavascript('assets/ponycfg.js', false);
+        $this->addJavascript('assets/clop.js', false);
+        
+        $this->app['twig.loader.filesystem']->prependPath(__DIR__."/twig");
+        
+        $html = $this->app['render']->render('_ponies.twig', array(
+            'agent' => "foo"
+        ));
+        
+        $this->addSnippet(SnippetLocation::END_OF_HTML, $html);
+        
+        
     }
     
     
@@ -30,28 +47,5 @@ class Extension extends BaseExtension
     {
         return "boltponies";
     }
-
-
-   function info()
-    {
-        $data = array(
-            'name' => "boltponies",
-            'description' => "a bolt-extension that implements http://panzi.github.io/Browser-Ponies/",
-            'keywords' => "ponies",
-            'author' => "Alvaro Berndt",
-            'link' => "https://github.com/EazyAlvaro/boltponies",
-            'version' => "0.1",
-            'required_bolt_version' => "2.0",
-            'highest_bolt_version' => "3.0",
-            'type' => "General",
-            'first_releasedate' => "2014-11-01",
-            'latest_releasedate' => "2014-11-01",
-            'dependencies' => "",
-            'priority' => 10
-        );
-        return $data;
-    }
-
-
 
 }
