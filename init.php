@@ -1,5 +1,5 @@
 <?php
 
-use Bolt\Extension\EazyAlvaro\BoltPonies\Extension;
+use Bolt\Extension\EazyAlvaro\Boltponies\Extension;
 
 $app['extensions']->register(new Extension($app));
