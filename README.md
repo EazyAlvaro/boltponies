@@ -1,4 +1,4 @@
-boltponies
-==========
+Bolt Ponies
+===========
 
-a bolt-extension that implements http://panzi.github.io/Browser-Ponies/
+An extension that implements http://panzi.github.io/Browser-Ponies/

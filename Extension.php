@@ -1,57 +1,31 @@
 <?php
 
-namespace Bolt\Extension\EazyAlvaro\Boltponies;
+namespace Bolt\Extension\EazyAlvaro\BoltPonies;
+
 use Bolt\Application;
 use Bolt\BaseExtension;
+use Bolt\Extensions\Snippets\Location as SnippetLocation;
 
 class Extension extends BaseExtension
 {
-    
-
-    public function __construct(Application $app)
-    {
-        parent::__construct($app);
-        
-        //$this->app['config']->getFields()->addField(new ColourPickField());
-        
-        
-        if ($this->app['config']->getWhichEnd()=='frontend') {
-            $this->app['htmlsnippets'] = true;
-            $this->app['twig.loader.filesystem']->prependPath(__DIR__."/twig");
-        }
-    }
-    public function initialize() {
-        $this->addJavascript('assets/browserponies.js', true);
-        $this->addJavascript('assets/ponycfg.js', true);
-    }
-    
-    
     public function getName()
     {
-        return "boltponies";
+        return "BoltPonies";
     }
 
-
-   function info()
+    public function initialize()
     {
-        $data = array(
-            'name' => "boltponies",
-            'description' => "a bolt-extension that implements http://panzi.github.io/Browser-Ponies/",
-            'keywords' => "ponies",
-            'author' => "Alvaro Berndt",
-            'link' => "https://github.com/EazyAlvaro/boltponies",
-            'version' => "0.1",
-            'required_bolt_version' => "2.0",
-            'highest_bolt_version' => "3.0",
-            'type' => "General",
-            'first_releasedate' => "2014-11-01",
-            'latest_releasedate' => "2014-11-01",
-            'dependencies' => "",
-            'priority' => 10
-        );
-        return $data;
+        // Add extension's Twig path
+        $this->app['twig.loader.filesystem']->addPath(__DIR__ . '/twig/');
+
+        // Render the HTML from the Twig file
+        $html = $this->app['render']->render('_ponies.twig', array());
+
+        // Insert renderd HTML at the end of <head>
+        $this->addSnippet(SnippetLocation::END_OF_HEAD, $html);
+
+        // Add our config file
+        $this->addJavascript('assets/ponycfg.js', true);
     }
-
-
 
 }
