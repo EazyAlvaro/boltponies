@@ -23,8 +23,5 @@
         }
     },
     "extra" : {
-        "branch-alias" : {
-            "dev-master" : "2.0.*"
-        }
     }
 }
