@@ -31,27 +31,4 @@ class Extension extends BaseExtension
         return "boltponies";
     }
 
-
-   function info()
-    {
-        $data = array(
-            'name' => "boltponies",
-            'description' => "a bolt-extension that implements http://panzi.github.io/Browser-Ponies/",
-            'keywords' => "ponies",
-            'author' => "Alvaro Berndt",
-            'link' => "https://github.com/EazyAlvaro/boltponies",
-            'version' => "0.1",
-            'required_bolt_version' => "2.0",
-            'highest_bolt_version' => "3.0",
-            'type' => "General",
-            'first_releasedate' => "2014-11-01",
-            'latest_releasedate' => "2014-11-01",
-            'dependencies' => "",
-            'priority' => 10
-        );
-        return $data;
-    }
-
-
-
 }
