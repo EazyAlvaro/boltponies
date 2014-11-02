@@ -1,6 +1,6 @@
 {
     "name" : "eazyalvaro/boltponies",
-    "description" : "A Bolt extension that implements http://panzi.github.io/Browser-Ponies/",
+    "description" : "An extension that implements http://panzi.github.io/Browser-Ponies/",
     "type" : "bolt-extension",
     "keywords" : [
         "ponies"
